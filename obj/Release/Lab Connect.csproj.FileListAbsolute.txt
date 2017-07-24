@@ -1,0 +1,10 @@
+C:\Users\SREEHARI\Documents\Visual Studio 2012\Projects\Lab Connect\Lab Connect\bin\Release\Lab Connect.exe.config
+C:\Users\SREEHARI\Documents\Visual Studio 2012\Projects\Lab Connect\Lab Connect\obj\Release\MainWindow.baml
+C:\Users\SREEHARI\Documents\Visual Studio 2012\Projects\Lab Connect\Lab Connect\obj\Release\view.baml
+C:\Users\SREEHARI\Documents\Visual Studio 2012\Projects\Lab Connect\Lab Connect\obj\Release\MainWindow.g.cs
+C:\Users\SREEHARI\Documents\Visual Studio 2012\Projects\Lab Connect\Lab Connect\obj\Release\view.g.cs
+C:\Users\SREEHARI\Documents\Visual Studio 2012\Projects\Lab Connect\Lab Connect\obj\Release\App.g.cs
+C:\Users\SREEHARI\Documents\Visual Studio 2012\Projects\Lab Connect\Lab Connect\obj\Release\Lab Connect_MarkupCompile.cache
+C:\Users\SREEHARI\Documents\Visual Studio 2012\Projects\Lab Connect\Lab Connect\obj\Release\Lab Connect.g.resources
+C:\Users\SREEHARI\Documents\Visual Studio 2012\Projects\Lab Connect\Lab Connect\obj\Release\Lab_Connect.Properties.Resources.resources
+C:\Users\SREEHARI\Documents\Visual Studio 2012\Projects\Lab Connect\Lab Connect\obj\Release\Lab Connect.csproj.GenerateResource.Cache
