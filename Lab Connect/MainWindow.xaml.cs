@@ -31,7 +31,7 @@ namespace Lab_Connect
         {
             //DBdataEntryPentra(null);
             //DBdataEntryTba40fr(null);
-            DBdataEntry(null);
+            //DBdataEntry(null);
             InitializeComponent();
             getPorts();
         }
