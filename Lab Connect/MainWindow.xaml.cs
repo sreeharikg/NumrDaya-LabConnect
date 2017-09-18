@@ -140,7 +140,7 @@ namespace Lab_Connect
         }
 
 
-        private void tba25fr_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        private void  tba25fr_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
             
             DateTime dt = DateTime.Now;
@@ -170,18 +170,24 @@ namespace Lab_Connect
             {
                 tempResult += hex;
                 string thrdData = tempResult;
-                
-                new Thread(() =>
+               // dbentry25fr(thrdData);
+                Task.Run(() =>
                 {
                     Thread.CurrentThread.IsBackground = true;
                     DBdataEntry(thrdData);
-                }).Start();
+                });
                 
                 tempResult = "";
             }
 
         }
-
+        //private async Task dbentry25fr(string thrdData)
+        //{
+        //    Task.Run(() =>
+        //    {
+        //        DBdataEntry(thrdData);
+        //    });
+        //}
         private void DBdataEntry(String strData)
         {
             try
@@ -242,17 +248,18 @@ namespace Lab_Connect
             }
             catch (Exception eg)
             {
-                string path = @"C:\numrErrors\log.txt";
-                if (File.Exists(path))
-                {
-                    File.AppendAllText(path, eg.TargetSite+"\n"+eg.StackTrace+"\n"+eg.Message + " -" + System.DateTime.Now+"\n\n");
-                }
-                else
-                {
-                    Directory.CreateDirectory(@"C:\numrErrors\");
-                    File.WriteAllText(path, eg.TargetSite + "\n" + eg.StackTrace + "\n" + eg.Message + " -" + System.DateTime.Now + "\n\n");
-                }
-                Common.Util.Logger.Error("TBA25fr msg splitting", eg);
+                //string path = @"C:\numrErrors\log.txt";
+                //if (File.Exists(path))
+                //{
+                //    File.AppendAllText(path, eg.TargetSite+"\n"+eg.StackTrace+"\n"+eg.Message + " -" + System.DateTime.Now+"\n\n");
+                //}
+                //else
+                //{
+                //    Directory.CreateDirectory(@"C:\numrErrors\");
+                //    File.WriteAllText(path, eg.TargetSite + "\n" + eg.StackTrace + "\n" + eg.Message + " -" + System.DateTime.Now + "\n\n");
+                //}
+                //Common.Util.Logger.Error("TBA25fr msg splitting", eg);
+                System.Windows.Forms.MessageBox.Show(eg.TargetSite + "\n" + eg.StackTrace + "\n" + eg.Message + "");
                 //tba40frPort.Close();
                 //tba40frPort.Open();
                 return;
