@@ -1,0 +1,192 @@
+﻿<Window x:Name="Lab_Connect" x:Class="Lab_Connect.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Lab Connect" Height="658.73" Width="592.949" Icon="Daya logos-04.jpg" ResizeMode="NoResize">
+    <Grid Margin="0,0,-8,0" Height="624" VerticalAlignment="Top">
+        <GroupBox x:Name="TBA_25FR" Header="TBA-25FR" HorizontalAlignment="Left" Margin="10,18,0,0" VerticalAlignment="Top" Height="105" Width="564">
+            <StackPanel Height="83" VerticalAlignment="Top" Margin="0,0,-2,0">
+                <Label Content="Port" Margin="0" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <ComboBox x:Name="port_Tba25fr" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0"/>                
+                <ComboBox x:Name="buadRate_Tba25fr" Margin="110,-22,0,0" Width="100"  HorizontalAlignment="Left" VerticalAlignment="Top" SelectedIndex="3">
+                    <ComboBoxItem Content="1200"/>
+                    <ComboBoxItem Content="2400"/>
+                    <ComboBoxItem Content="4800"/>
+                    <ComboBoxItem Content="9600"/>
+                    <ComboBoxItem Content="19200"/>
+                </ComboBox>
+                <Label Content="Buad Rate" Margin="110,-50,0,0" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <ComboBox x:Name="parity_Tba25fr" Margin="220,-22,0,0" Width="100"  HorizontalAlignment="Left" VerticalAlignment="Top" SelectedIndex="0">
+                    <ComboBoxItem Content="None"/>
+                    <ComboBoxItem Content="Even"/>
+                    <ComboBoxItem Content="Odd"/>
+                </ComboBox>
+                <Label Content="Parity" Margin="220,-50,0,0" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <ComboBox x:Name="dataBit_Tba25fr" Margin="330,-22,0,0" Width="100"  HorizontalAlignment="Left" VerticalAlignment="Top" SelectedIndex="4">
+                    <ComboBoxItem Content="4"/>
+                    <ComboBoxItem Content="5"/>
+                    <ComboBoxItem Content="6"/>
+                    <ComboBoxItem Content="7"/>
+                    <ComboBoxItem Content="8"/>
+                </ComboBox>
+                <Label Content="Data Bits" Margin="330,-50,0,0" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <ComboBox x:Name="stopbit_Tba25fr" Margin="440,-22,0,0" Width="100"  HorizontalAlignment="Left" VerticalAlignment="Top" SelectedIndex="0">
+                    <ComboBoxItem Content="1"/>
+                    <ComboBoxItem Content="2"/>
+                    <ComboBoxItem Content="3"/>
+                </ComboBox>
+                <Label Content="Stop Bits" Margin="440,-50,0,0" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button x:Name="connect_tba25fr" Content="Connect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="128,10,0,0" Click="connect_tba25fr_Click"/>
+                <Button x:Name="disconnect_tba25fr_Copy" Content="Disconnect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="233,-20,0,0" Click="disconnect_tba25fr_Copy_Click"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Cobas E44" HorizontalAlignment="Left" Margin="10,267,0,0" VerticalAlignment="Top" Height="105" Width="564">
+            <StackPanel Height="83" VerticalAlignment="Top" Margin="0,0,-2,0">
+                <Label Content="Port" Margin="0" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <ComboBox x:Name="port_cobas244" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0"/>
+                <ComboBox x:Name="buadRate_cobas244" Margin="110,-22,0,0" Width="100"  HorizontalAlignment="Left" VerticalAlignment="Top" SelectedIndex="4">
+                    <ComboBoxItem Content="1200"/>
+                    <ComboBoxItem Content="2400"/>
+                    <ComboBoxItem Content="4800"/>
+                    <ComboBoxItem Content="9600"/>
+                    <ComboBoxItem Content="19200"/>
+                </ComboBox>
+                <Label Content="Buad Rate" Margin="110,-50,0,0" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <ComboBox x:Name="parity_cobas244" Margin="220,-22,0,0" Width="100"  HorizontalAlignment="Left" VerticalAlignment="Top" SelectedIndex="0">
+                    <ComboBoxItem Content="None"/>
+                    <ComboBoxItem Content="Even"/>
+                    <ComboBoxItem Content="Odd"/>
+                </ComboBox>
+                <Label Content="Parity" Margin="220,-50,0,0" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <ComboBox x:Name="dataBit_cobas244" Margin="330,-22,0,0" Width="100"  HorizontalAlignment="Left" VerticalAlignment="Top" SelectedIndex="4">
+                    <ComboBoxItem Content="4"/>
+                    <ComboBoxItem Content="5"/>
+                    <ComboBoxItem Content="6"/>
+                    <ComboBoxItem Content="7"/>
+                    <ComboBoxItem Content="8"/>
+                </ComboBox>
+                <Label Content="Data Bits" Margin="330,-50,0,0" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <ComboBox x:Name="stopbit_cobas244" Margin="440,-22,0,0" Width="100"  HorizontalAlignment="Left" VerticalAlignment="Top" SelectedIndex="0">
+                    <ComboBoxItem Content="1"/>
+                    <ComboBoxItem Content="2"/>
+                    <ComboBoxItem Content="3"/>
+                </ComboBox>
+                <Label Content="Stop Bits" Margin="440,-50,0,0" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button x:Name="connect_cobas244" Content="Connect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="128,10,0,0" Click="connect_cobas244_Click"/>
+                <Button x:Name="disconnect_cobas244" Content="Disconnect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="233,-20,0,0" Click="disconnect_cobas244_Click"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="TBA-40FR" HorizontalAlignment="Left" Margin="10,142,0,0" VerticalAlignment="Top" Height="105" Width="564">
+            <StackPanel Height="83" VerticalAlignment="Top" Margin="0,0,-2,0">
+                <Label Content="Port" Margin="0" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <ComboBox x:Name="port_Tba40fr" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0"/>
+                <ComboBox x:Name="buadRate_Tba40fr" Margin="110,-22,0,0" Width="100"  HorizontalAlignment="Left" VerticalAlignment="Top" SelectedIndex="1">
+                    <ComboBoxItem Content="1200"/>
+                    <ComboBoxItem Content="2400"/>
+                    <ComboBoxItem Content="4800"/>
+                    <ComboBoxItem Content="9600"/>
+                    <ComboBoxItem Content="19200"/>
+                </ComboBox>
+                <Label Content="Buad Rate" Margin="110,-50,0,0" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <ComboBox x:Name="parity_Tba40fr" Margin="220,-22,0,0" Width="100"  HorizontalAlignment="Left" VerticalAlignment="Top" SelectedIndex="0">
+                    <ComboBoxItem Content="None"/>
+                    <ComboBoxItem Content="Even"/>
+                    <ComboBoxItem Content="Odd"/>
+                </ComboBox>
+                <Label Content="Parity" Margin="220,-50,0,0" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <ComboBox x:Name="dataBit_Tba40fr" Margin="330,-22,0,0" Width="100"  HorizontalAlignment="Left" VerticalAlignment="Top" SelectedIndex="4">
+                    <ComboBoxItem Content="4"/>
+                    <ComboBoxItem Content="5"/>
+                    <ComboBoxItem Content="6"/>
+                    <ComboBoxItem Content="7"/>
+                    <ComboBoxItem Content="8"/>
+                </ComboBox>
+                <Label Content="Data Bits" Margin="330,-50,0,0" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <ComboBox x:Name="stopbit_Tba40fr" Margin="440,-22,0,0" Width="100"  HorizontalAlignment="Left" VerticalAlignment="Top" SelectedIndex="0">
+                    <ComboBoxItem Content="1"/>
+                    <ComboBoxItem Content="2"/>
+                    <ComboBoxItem Content="3"/>
+                </ComboBox>
+                <Label Content="Stop Bits" Margin="440,-50,0,0" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button x:Name="connect_Tba40fr" Content="Connect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="128,10,0,0" Click="connect_Tba40fr_Click"/>
+                <Button x:Name="disconnect_Tba40fr" Content="Disconnect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="233,-20,0,0" Click="disconnect_Tba40fr_Click"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Pentra ES 60" HorizontalAlignment="Left" Margin="10,390,0,0" VerticalAlignment="Top" Height="105" Width="564">
+            <StackPanel Height="83" VerticalAlignment="Top" Margin="0,0,-2,0">
+                <Label Content="Port" Margin="0" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <ComboBox x:Name="port_pentraEs60" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0"/>
+                <ComboBox x:Name="buadRate_pentraEs60" Margin="110,-22,0,0" Width="100"  HorizontalAlignment="Left" VerticalAlignment="Top" SelectedIndex="3">
+                    <ComboBoxItem Content="1200"/>
+                    <ComboBoxItem Content="2400"/>
+                    <ComboBoxItem Content="4800"/>
+                    <ComboBoxItem Content="9600"/>
+                    <ComboBoxItem Content="19200"/>
+                </ComboBox>
+                <Label Content="Buad Rate" Margin="110,-50,0,0" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <ComboBox x:Name="parity_pentraEs60" Margin="220,-22,0,0" Width="100"  HorizontalAlignment="Left" VerticalAlignment="Top" SelectedIndex="0">
+                    <ComboBoxItem Content="None"/>
+                    <ComboBoxItem Content="Even"/>
+                    <ComboBoxItem Content="Odd"/>
+                </ComboBox>
+                <Label Content="Parity" Margin="220,-50,0,0" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <ComboBox x:Name="dataBit_pentraEs60" Margin="330,-22,0,0" Width="100"  HorizontalAlignment="Left" VerticalAlignment="Top" SelectedIndex="4">
+                    <ComboBoxItem Content="4"/>
+                    <ComboBoxItem Content="5"/>
+                    <ComboBoxItem Content="6"/>
+                    <ComboBoxItem Content="7"/>
+                    <ComboBoxItem Content="8"/>
+                </ComboBox>
+                <Label Content="Data Bits" Margin="330,-50,0,0" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <ComboBox x:Name="stopbit_pentraEs60" Margin="440,-22,0,0" Width="100"  HorizontalAlignment="Left" VerticalAlignment="Top" SelectedIndex="0">
+                    <ComboBoxItem Content="1"/>
+                    <ComboBoxItem Content="2"/>
+                    <ComboBoxItem Content="3"/>
+                </ComboBox>
+                <Label Content="Stop Bits" Margin="440,-50,0,0" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button x:Name="connect_pentraEs60" Content="Connect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="128,10,0,0" Click="connect_pentraEs60_Click"/>
+                <Button x:Name="disconnect_pentraEs60" Content="Disconnect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="233,-20,0,0" Click="disconnect_pentraEs60_Click"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="Vitek2" Header="Vitek2" HorizontalAlignment="Left" Margin="10,514,0,0" VerticalAlignment="Top" Height="105" Width="564">
+            <StackPanel Height="83" VerticalAlignment="Top" Margin="0,0,-2,0">
+                <Label Content="Port" Margin="0" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <ComboBox x:Name="port_pentraEs1" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0"/>
+                <ComboBox x:Name="buadRate_pentraEs1" Margin="110,-22,0,0" Width="100"  HorizontalAlignment="Left" VerticalAlignment="Top" SelectedIndex="3">
+                    <ComboBoxItem Content="1200"/>
+                    <ComboBoxItem Content="2400"/>
+                    <ComboBoxItem Content="4800"/>
+                    <ComboBoxItem Content="9600"/>
+                    <ComboBoxItem Content="19200"/>
+                </ComboBox>
+                <Label Content="Buad Rate" Margin="110,-50,0,0" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <ComboBox x:Name="parity_pentraEs1" Margin="220,-22,0,0" Width="100"  HorizontalAlignment="Left" VerticalAlignment="Top" SelectedIndex="0">
+                    <ComboBoxItem Content="None"/>
+                    <ComboBoxItem Content="Even"/>
+                    <ComboBoxItem Content="Odd"/>
+                </ComboBox>
+                <Label Content="Parity" Margin="220,-50,0,0" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <ComboBox x:Name="dataBit_pentraEs1" Margin="330,-22,0,0" Width="100"  HorizontalAlignment="Left" VerticalAlignment="Top" SelectedIndex="4">
+                    <ComboBoxItem Content="4"/>
+                    <ComboBoxItem Content="5"/>
+                    <ComboBoxItem Content="6"/>
+                    <ComboBoxItem Content="7"/>
+                    <ComboBoxItem Content="8"/>
+                </ComboBox>
+                <Label Content="Data Bits" Margin="330,-50,0,0" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <ComboBox x:Name="stopbit_pentraEs1" Margin="440,-22,0,0" Width="100"  HorizontalAlignment="Left" VerticalAlignment="Top" SelectedIndex="0">
+                    <ComboBoxItem Content="1"/>
+                    <ComboBoxItem Content="2"/>
+                    <ComboBoxItem Content="3"/>
+                </ComboBox>
+                <Label Content="Stop Bits" Margin="440,-50,0,0" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button x:Name="connect_pentraEs1" Content="Connect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="128,10,0,0" Click="connect_pentraEs60_Click"/>
+                <Button x:Name="disconnect_pentraEs1" Content="Disconnect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="233,-20,0,0" Click="disconnect_pentraEs60_Click"/>
+            </StackPanel>
+        </GroupBox>
+        <Menu HorizontalAlignment="Left" Height="18" VerticalAlignment="Top" Width="107" Margin="478,0,0,0">
+            <MenuItem Header="Restart" Click="MenuItem_Click_1"/>
+            <MenuItem Header="Refresh" Click="MenuItem_Click_2"/>
+        </Menu>
+
+    </Grid>
+</Window>
