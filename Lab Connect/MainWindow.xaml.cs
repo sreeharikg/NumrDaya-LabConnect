@@ -716,11 +716,12 @@ namespace Lab_Connect
             {
                 pentraTempResult += hex;
                 string thrdData = pentraTempResult;
-                new Thread(() =>
-                {
-                    Thread.CurrentThread.IsBackground = true;
-                    DBdataEntryPentra(thrdData);
-                }).Start();
+                //new Thread(() =>
+                //{
+                //    Thread.CurrentThread.IsBackground = true;
+                //    DBdataEntryPentra(thrdData);
+                //}).Start();
+                Task.Run(() => DBdataEntryPentra(thrdData));
                 pentraTempResult = "";
             }
 
@@ -732,7 +733,7 @@ namespace Lab_Connect
 
         }
 
-        private void DBdataEntryPentra(String strData)
+        private async Task DBdataEntryPentra(String strData)
         {
             #region old
             //try
@@ -773,7 +774,7 @@ namespace Lab_Connect
             {
                 strData = strData.Replace("-", "");
                 string resultStr = hexToString(strData);
-                const char LF = '\u000a';
+                const char LF = '\u000D';
                 const char soh = (char)01;
                 const char stx = (char)02;
                 const char enq = (char)05;
