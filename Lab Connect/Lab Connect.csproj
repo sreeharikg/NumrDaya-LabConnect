@@ -38,11 +38,11 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="mono.security">
-      <HintPath>..\..\..\..\..\Desktop\mono.security.dll</HintPath>
+    <Reference Include="Mono.Security">
+      <HintPath>..\..\numrDeployment\DAL\files\Mono.Security.dll</HintPath>
     </Reference>
-    <Reference Include="npgsql">
-      <HintPath>..\..\..\..\..\Desktop\npgsql.dll</HintPath>
+    <Reference Include="Npgsql">
+      <HintPath>..\..\numrDeployment\DAL\files\Npgsql.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />

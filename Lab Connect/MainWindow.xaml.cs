@@ -806,27 +806,27 @@ namespace Lab_Connect
                         string[] temp = s.Split('|');
                         rsltStrTmp += "WBC@" + temp[3] + "_";
                     }
-                    else if (s.Contains("^LYM#^"))
+                    else if (s.Contains("^LYM%^"))
                     {
                         string[] temp = s.Split('|');
                         rsltStrTmp +="LYM@"+temp[3]+ "_";
                     }
-                    else if (s.Contains("^MON#^"))
+                    else if (s.Contains("^MON%^"))
                     {
                         string[] temp = s.Split('|');
                         rsltStrTmp += "MON@" + temp[3] + "_";
                     }
-                    else if (s.Contains("^NEU#^"))
+                    else if (s.Contains("^NEU%^"))
                     {
                         string[] temp = s.Split('|');
                         rsltStrTmp += "NEU@" + temp[3] + "_";
                     }
-                    else if (s.Contains("^EOS#^"))
+                    else if (s.Contains("^EOS%^"))
                     {
                         string[] temp = s.Split('|');
                         rsltStrTmp += "EOS@" + temp[3] + "_";
                     }
-                    else if (s.Contains("^BAS#^"))
+                    else if (s.Contains("^BAS%^"))
                     {
                         string[] temp = s.Split('|');
                         rsltStrTmp += "BAS@" + temp[3] + "_";
