@@ -228,13 +228,13 @@ namespace Lab_Connect
 
 
                     List<DBCommand> commands = new List<DBCommand>();
-                    using (DBCommand cmdInsert = new DBCommand("insert into lab_machine_data(id,test_id,sample_id,result_string,msg_str,completed_date,ordered_date,tba25fr)values(@id,@test_id,@sample_id,@result_string,@msg_str,@completed_date,@ordered_date,@tba25fr)"))
+                    using (DBCommand cmdInsert = new DBCommand("insert into lab_machine_data(id,test_id,sample_id,result_string,completed_date,ordered_date,tba25fr)values(@id,@test_id,@sample_id,@result_string,@completed_date,@ordered_date,@tba25fr)"))
                     {
                         cmdInsert.Parameters.AddWithValue("@id", nxtId);
                         cmdInsert.Parameters.AddWithValue("@test_id", Pdata.Substring(12, 15));
                         cmdInsert.Parameters.AddWithValue("@sample_id", resultStr.Substring(6, 20));
                         cmdInsert.Parameters.AddWithValue("@result_string", resultss);
-                        cmdInsert.Parameters.AddWithValue("@msg_str", hexToString(strData));
+                       // cmdInsert.Parameters.AddWithValue("@msg_str", hexToString(strData));
                         cmdInsert.Parameters.AddWithValue("@completed_date", cmpltDt);
                         cmdInsert.Parameters.AddWithValue("@ordered_date", ordDt);
                         cmdInsert.Parameters.AddWithValue("@tba25fr", 1);
@@ -268,7 +268,7 @@ namespace Lab_Connect
 
         private void disconnect_tba25fr_Copy_Click(object sender, RoutedEventArgs e)
         {
-            tba25frPort = new System.IO.Ports.SerialPort();
+            //tba25frPort = new System.IO.Ports.SerialPort();
             if (tba25frPort.IsOpen)
             {
                 connect_tba25fr.Content = "Connect";
@@ -421,13 +421,13 @@ namespace Lab_Connect
 
 
                     List<DBCommand> commands = new List<DBCommand>();
-                    using (DBCommand cmdInsert = new DBCommand("insert into lab_machine_data(id,test_id,sample_id,result_string,msg_Str,completed_date,tba40fr)values(@id,@test_id,@sample_id,@result_string,@msg_Str,@completed_date,@tba40fr)"))
+                    using (DBCommand cmdInsert = new DBCommand("insert into lab_machine_data(id,test_id,sample_id,result_string,completed_date,tba40fr)values(@id,@test_id,@sample_id,@result_string,@completed_date,@tba40fr)"))
                     {
                         cmdInsert.Parameters.AddWithValue("@id", nxtId);
                         cmdInsert.Parameters.AddWithValue("@test_id", testID);
                         cmdInsert.Parameters.AddWithValue("@sample_id", sample);
                         cmdInsert.Parameters.AddWithValue("@result_string", resultss);
-                        cmdInsert.Parameters.AddWithValue("@msg_Str", resultStr);
+                       // cmdInsert.Parameters.AddWithValue("@msg_Str", resultStr);
                         cmdInsert.Parameters.AddWithValue("@completed_date", cpltedDate);
                         cmdInsert.Parameters.AddWithValue("@tba40fr", 1);
                         commands.Add(cmdInsert);
@@ -448,7 +448,7 @@ namespace Lab_Connect
 
         private void disconnect_Tba40fr_Click(object sender, RoutedEventArgs e)
         {
-            tba40frPort = new System.IO.Ports.SerialPort();
+            //tba40frPort = new System.IO.Ports.SerialPort();
             if (tba40frPort.IsOpen)
             {
                 connect_Tba40fr.Content = "Connect";
@@ -603,13 +603,13 @@ namespace Lab_Connect
 
 
                     List<DBCommand> commands = new List<DBCommand>();
-                    using (DBCommand cmdInsert = new DBCommand("insert into lab_machine_data(id,test_id,sample_id,result_string,msg_Str,completed_date,ordered_date,cobas)values(@id,@test_id,@sample_id,@result_string,@msg_Str,@completed_date,@ordered_date,@cobas)"))
+                    using (DBCommand cmdInsert = new DBCommand("insert into lab_machine_data(id,test_id,sample_id,result_string,completed_date,ordered_date,cobas)values(@id,@test_id,@sample_id,@result_string,@completed_date,@ordered_date,@cobas)"))
                     {
                         cmdInsert.Parameters.AddWithValue("@id", nxtId);
                         cmdInsert.Parameters.AddWithValue("@test_id", testID);
                         cmdInsert.Parameters.AddWithValue("@sample_id", sample);
                         cmdInsert.Parameters.AddWithValue("@result_string", results);
-                        cmdInsert.Parameters.AddWithValue("@msg_Str", resultStr);
+                        //cmdInsert.Parameters.AddWithValue("@msg_Str", resultStr);
                         cmdInsert.Parameters.AddWithValue("@completed_date", cmpltDt);
                         cmdInsert.Parameters.AddWithValue("@ordered_date", ordDt);
                         cmdInsert.Parameters.AddWithValue("@cobas", 1);
@@ -629,7 +629,7 @@ namespace Lab_Connect
         }
         private void disconnect_cobas244_Click(object sender, RoutedEventArgs e)
         {
-            cobase44Port = new System.IO.Ports.SerialPort();
+            //cobase44Port = new System.IO.Ports.SerialPort();
             if (cobase44Port.IsOpen)
             {
                 connect_cobas244.Content = "Connect";
@@ -888,13 +888,13 @@ namespace Lab_Connect
 
 
                     List<DBCommand> commands = new List<DBCommand>();
-                    using (DBCommand cmdInsert = new DBCommand("insert into lab_machine_data(id,test_id,sample_id,result_string,msg_Str,completed_date,pentra)values(@id,@test_id,@sample_id,@result_string,@msg_Str,@completed_date,@pentra)"))
+                    using (DBCommand cmdInsert = new DBCommand("insert into lab_machine_data(id,test_id,sample_id,result_string,completed_date,pentra)values(@id,@test_id,@sample_id,@result_string,@completed_date,@pentra)"))
                     {
                         cmdInsert.Parameters.AddWithValue("@id", nxtId);
                         cmdInsert.Parameters.AddWithValue("@test_id", testID);
                         cmdInsert.Parameters.AddWithValue("@sample_id", sample);
                         cmdInsert.Parameters.AddWithValue("@result_string", rsltStrTmp);
-                        cmdInsert.Parameters.AddWithValue("@msg_Str", resultStr);
+                       // cmdInsert.Parameters.AddWithValue("@msg_Str", resultStr);
                         cmdInsert.Parameters.AddWithValue("@completed_date", cmpltDt);
                         cmdInsert.Parameters.AddWithValue("@pentra", 1);
                         commands.Add(cmdInsert);
@@ -916,7 +916,7 @@ namespace Lab_Connect
 
         private void disconnect_pentraEs60_Click(object sender, RoutedEventArgs e)
         {
-            pentraEs60Port = new System.IO.Ports.SerialPort();
+            //pentraEs60Port = new System.IO.Ports.SerialPort();
             if (pentraEs60Port.IsOpen)
             {
                 connect_pentraEs60.Content = "Connect";
