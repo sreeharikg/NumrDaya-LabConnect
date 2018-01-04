@@ -269,7 +269,7 @@ namespace Lab_Connect
         private void disconnect_tba25fr_Copy_Click(object sender, RoutedEventArgs e)
         {
             //tba25frPort = new System.IO.Ports.SerialPort();
-            if (tba25frPort.IsOpen)
+            if (tba25frPort!=null && tba25frPort.IsOpen)
             {
                 connect_tba25fr.Content = "Connect";
                 connect_tba25fr.IsEnabled = true;
@@ -449,7 +449,7 @@ namespace Lab_Connect
         private void disconnect_Tba40fr_Click(object sender, RoutedEventArgs e)
         {
             //tba40frPort = new System.IO.Ports.SerialPort();
-            if (tba40frPort.IsOpen)
+            if (tba40frPort!=null && tba40frPort.IsOpen)
             {
                 connect_Tba40fr.Content = "Connect";
                 connect_Tba40fr.IsEnabled = true;
@@ -630,7 +630,7 @@ namespace Lab_Connect
         private void disconnect_cobas244_Click(object sender, RoutedEventArgs e)
         {
             //cobase44Port = new System.IO.Ports.SerialPort();
-            if (cobase44Port.IsOpen)
+            if (cobase44Port!=null && cobase44Port.IsOpen)
             {
                 connect_cobas244.Content = "Connect";
                 connect_cobas244.IsEnabled = true;
@@ -917,7 +917,7 @@ namespace Lab_Connect
         private void disconnect_pentraEs60_Click(object sender, RoutedEventArgs e)
         {
             //pentraEs60Port = new System.IO.Ports.SerialPort();
-            if (pentraEs60Port.IsOpen)
+            if (pentraEs60Port!= null && pentraEs60Port.IsOpen)
             {
                 connect_pentraEs60.Content = "Connect";
                 connect_pentraEs60.IsEnabled = true;
