@@ -891,10 +891,10 @@ namespace Lab_Connect
                     using (DBCommand cmdInsert = new DBCommand("insert into lab_machine_data(id,test_id,sample_id,result_string,completed_date,pentra)values(@id,@test_id,@sample_id,@result_string,@completed_date,@pentra)"))
                     {
                         cmdInsert.Parameters.AddWithValue("@id", nxtId);
-                        cmdInsert.Parameters.AddWithValue("@test_id", testID);
+                        cmdInsert.Parameters.AddWithValue("@test_id", sample);
                         cmdInsert.Parameters.AddWithValue("@sample_id", sample);
                         cmdInsert.Parameters.AddWithValue("@result_string", rsltStrTmp);
-                       // cmdInsert.Parameters.AddWithValue("@msg_Str", resultStr);
+                      //  cmdInsert.Parameters.AddWithValue("@msg_Str", testID);
                         cmdInsert.Parameters.AddWithValue("@completed_date", cmpltDt);
                         cmdInsert.Parameters.AddWithValue("@pentra", 1);
                         commands.Add(cmdInsert);

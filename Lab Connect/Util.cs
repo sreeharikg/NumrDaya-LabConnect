@@ -1,5 +1,4 @@
-﻿using log4net;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -9,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.Globalization;
 using System.Text.RegularExpressions;
+using log4net;
+
 namespace Common
 {
     public static class Util
@@ -133,7 +134,7 @@ namespace Common
         {
             get
             {
-                log4net.Config.XmlConfigurator.Configure();
+              //  log4net.Config.XmlConfigurator.Configure();
                 log4net.GlobalContext.Properties["AppName"] = ConfigurationManager.AppSettings["ApplicationName"];
                 return _Logger;
 
